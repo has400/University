@@ -1,0 +1,2 @@
+trade-limit:600000.0
+interval-period:1.0
