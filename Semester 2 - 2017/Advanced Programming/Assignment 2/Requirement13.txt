@@ -1,0 +1,50 @@
+/******************************************************************************
+
+** Student Name: Harrison Smith
+
+** Student Number: s3658817
+
+** Date of submission: Fri, 13 Oct 2017
+
+** Course: COSC1076 / COSC2207, Semester 2, 2017
+
+******************************************************************************/
+
+valgrind --track-origins=yes ./vm stock.dat
+
+==60611== Memcheck, a memory error detector
+==60611== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==60611== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==60611== Command: ./vm stock.dat
+==60611== Parent PID: 37958
+==60611== 
+==60611== 
+==60611== HEAP SUMMARY:
+==60611==     in use at exit: 0 bytes in 0 blocks
+==60611==   total heap usage: 16 allocs, 16 frees, 3,232 bytes allocated
+==60611== 
+==60611== All heap blocks were freed -- no leaks are possible
+==60611== 
+==60611== For counts of detected and suppressed errors, rerun with: -v
+==60611== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
+
+
+valgrind --leak-check=full --show-reachable=yes ./vm stock.dat
+
+==61060== Memcheck, a memory error detector
+==61060== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==61060== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==61060== Command: ./vm stock.dat
+==61060== Parent PID: 37958
+==61060==
+==61060== 
+==61060==
+==61060== HEAP SUMMARY:
+==61060==     in use at exit: 0 bytes in 0 blocks
+==61060==   total heap usage: 16 allocs, 16 frees, 3,232 bytes allocated
+==61060==
+==61060== All heap blocks were freed -- no leaks are possible
+==61060==
+==61060== For counts of detected and suppressed errors, rerun with: -v
+==61060== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
